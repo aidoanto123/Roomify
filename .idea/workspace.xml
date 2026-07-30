@@ -18,7 +18,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="32" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -30,61 +29,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.000029889535449" />
-      <entry key="MS500" value="1.1244812191368072" />
-      <entry key="S2" value="1.5940172234317116" />
-      <entry key="S5" value="1.8329026220135838" />
-      <entry key="S10" value="2.17137981152698" />
-      <entry key="S30" value="4.708248151585055" />
-      <entry key="S60" value="8.38568599625895" />
-      <entry key="M2" value="13.340950911805367" />
-      <entry key="M5" value="20.066790588075264" />
-      <entry key="M10" value="23.84466300034048" />
-      <entry key="M15" value="25.464812605840894" />
-      <entry key="M30" value="29.233564787038834" />
-      <entry key="H1" value="41.28730557603057" />
-      <entry key="H2" value="76.29495390740315" />
-      <entry key="H4" value="163.5012259410918" />
-      <entry key="D1" value="447.6056580487923" />
-      <entry key="W1" value="547.8443847420206" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000014887902108" />
+      <entry key="S5" value="1.0117255548296" />
+      <entry key="S10" value="1.1082846010732834" />
+      <entry key="S30" value="1.47663827037236" />
+      <entry key="S60" value="1.6912312718009765" />
+      <entry key="M2" value="2.0854517913022645" />
+      <entry key="M5" value="10.276872844484814" />
+      <entry key="M10" value="29.283798649279394" />
+      <entry key="M15" value="42.72304677238493" />
+      <entry key="M30" value="64.22417020367237" />
+      <entry key="H1" value="87.24245574605975" />
+      <entry key="H2" value="127.55322434583847" />
+      <entry key="H4" value="216.7820896952038" />
+      <entry key="D1" value="507.4582432841887" />
+      <entry key="W1" value="611.1322473289714" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.833840355170696E-127" />
-      <entry key="MS500" value="4.4944060358431595E-26" />
-      <entry key="S2" value="4.6043473191620093E-7" />
-      <entry key="S5" value="0.00291922403026642" />
-      <entry key="S10" value="0.05406653355153881" />
-      <entry key="S30" value="0.42357323141310743" />
-      <entry key="S60" value="0.9541058607270773" />
-      <entry key="M2" value="1.7712510768931076" />
-      <entry key="M5" value="2.8207872440525583" />
-      <entry key="M10" value="3.3481905733007045" />
-      <entry key="M15" value="3.5812438513243077" />
-      <entry key="M30" value="4.5821707822023825" />
-      <entry key="H1" value="8.636574534829787" />
-      <entry key="H2" value="16.88262803062334" />
-      <entry key="H4" value="28.99642848122972" />
-      <entry key="D1" value="57.349766968398654" />
-      <entry key="W1" value="66.31623626433411" />
+      <entry key="MS100" value="2.5269283005913292E-92" />
+      <entry key="MS500" value="4.792019579757555E-19" />
+      <entry key="S2" value="2.631053299003893E-5" />
+      <entry key="S5" value="0.014724883193353603" />
+      <entry key="S10" value="0.12134612970075973" />
+      <entry key="S30" value="0.4950799173314295" />
+      <entry key="S60" value="0.7036261049634123" />
+      <entry key="M2" value="0.8436001001989485" />
+      <entry key="M5" value="1.1968568534732238" />
+      <entry key="M10" value="1.9912046912609511" />
+      <entry key="M15" value="2.604335278221218" />
+      <entry key="M30" value="4.077326663695167" />
+      <entry key="H1" value="8.085250577161256" />
+      <entry key="H2" value="16.29476482167858" />
+      <entry key="H4" value="28.60033666313557" />
+      <entry key="D1" value="57.8803085966624" />
+      <entry key="W1" value="67.23841756874594" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="9.149388816668524E-5" />
-      <entry key="MS500" value="0.20363662883802167" />
-      <entry key="S2" value="1.0962213913158745" />
-      <entry key="S5" value="1.5867025621913546" />
-      <entry key="S10" value="2.061611851151561" />
-      <entry key="S30" value="4.997231033605601" />
-      <entry key="S60" value="9.227290550654004" />
-      <entry key="M2" value="15.02892343027797" />
-      <entry key="M5" value="22.83981383821754" />
-      <entry key="M10" value="27.164895967137028" />
-      <entry key="M15" value="29.026209457373447" />
-      <entry key="M30" value="33.8038446613594" />
-      <entry key="H1" value="49.91426210386633" />
-      <entry key="H2" value="93.16846263681236" />
-      <entry key="H4" value="192.48892402942153" />
-      <entry key="D1" value="504.9519613214655" />
-      <entry key="W1" value="614.1600282607621" />
+      <entry key="MS100" value="1.7167030100842436E-5" />
+      <entry key="MS500" value="0.11141381198712139" />
+      <entry key="S2" value="0.5777693134480058" />
+      <entry key="S5" value="0.8251904151749784" />
+      <entry key="S10" value="1.1068435897256457" />
+      <entry key="S30" value="1.9086723686777411" />
+      <entry key="S60" value="2.3571809214315333" />
+      <entry key="M2" value="2.907964759358737" />
+      <entry key="M5" value="11.460079231752387" />
+      <entry key="M10" value="31.261453656047323" />
+      <entry key="M15" value="45.31487881011166" />
+      <entry key="M30" value="68.2916259717804" />
+      <entry key="H1" value="95.31884533000087" />
+      <entry key="H2" value="143.83923346883103" />
+      <entry key="H4" value="245.373866809229" />
+      <entry key="D1" value="565.3350746087375" />
+      <entry key="W1" value="678.3700668493562" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -117,7 +116,7 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.keymap",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Users\\hp\\WebstormProjects\\roomify\\node_modules\\typescript\\lib"
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2026.2.0.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -137,6 +136,7 @@
       <workItem from="1785243130095" duration="5971000" />
       <workItem from="1785262347788" duration="7691000" />
       <workItem from="1785313194080" duration="10372000" />
+      <workItem from="1785399224029" duration="1251000" />
     </task>
     <servers />
   </component>

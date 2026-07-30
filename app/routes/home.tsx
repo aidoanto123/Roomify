@@ -3,7 +3,8 @@ import Navbar from "../../components/Navbar";
 import {ArrowRight, ArrowUpRight, Clock, Layers} from "lucide-react";
 import Button from "../../components/ui/Button";
 import Upload from "../../components/Upload";
-import {useNavigate} from "react-router";
+import {useNavigate, useOutletContext} from "react-router";
+import puter from '@heyputer/puter.js';
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -14,10 +15,29 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
     const navigate = useNavigate();
+    const { isSignedIn } = useOutletContext<AuthContext>();
+
     const handleUploadComplete = async (base64Image: string) => {
-        const newId = Date.now().toString();
-        navigate(`/visualizer/${newId}`);
-        return true;
+        if (!isSignedIn) return false;
+
+        try {
+            const fileName = `floorplan-${Date.now()}.png`;
+            const path = `uploads/${fileName}`;
+            
+            // Ensure uploads directory exists
+            try {
+                await puter.fs.mkdir('uploads');
+            } catch (e) {
+                // Ignore if it already exists
+            }
+
+            await puter.fs.write(path, base64Image);
+            navigate(`/visualizer/${fileName}`);
+            return true;
+        } catch (error) {
+            console.error("Upload failed:", error);
+            return false;
+        }
     }
   return (
       <div className="home">
