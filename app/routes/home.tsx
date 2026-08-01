@@ -5,6 +5,8 @@ import Button from "../../components/ui/Button";
 import Upload from "../../components/Upload";
 import {useNavigate, useOutletContext} from "react-router";
 import puter from '@heyputer/puter.js';
+import {useState} from "react";
+import {createProject} from "../../lib/puter.action";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -15,29 +17,36 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
     const navigate = useNavigate();
-    const { isSignedIn } = useOutletContext<AuthContext>();
+    //const { isSignedIn } = useOutletContext<AuthContext>();
+    const [projects, setProjects] = useState<DesignItem[]>([]);
 
     const handleUploadComplete = async (base64Image: string) => {
-        if (!isSignedIn) return false;
+        const newId = Date.now().toString();
+        const name = `Residence ${newId}`;
+        const newItem = {
+            id: newId, name, sourceImage: base64Image,
+            renderedImage: undefined,
+            timestamp: Date.now()
+        }
 
-        try {
-            const fileName = `floorplan-${Date.now()}.png`;
-            const path = `uploads/${fileName}`;
-            
-            // Ensure uploads directory exists
-            try {
-                await puter.fs.mkdir('uploads');
-            } catch (e) {
-                // Ignore if it already exists
-            }
-
-            await puter.fs.write(path, base64Image);
-            navigate(`/visualizer/${fileName}`);
-            return true;
-        } catch (error) {
-            console.error("Upload failed:", error);
+        const saved = await createProject({item: newItem, visibility: "private"})
+        if (!saved) {
+            console.error("Failed to save project");
+            alert("Something went wrong saving your project — check the console for details.");
             return false;
         }
+        setProjects((prev) => [newItem, ...prev]);
+
+        navigate(`/visualizer/${newId}`, {
+            state: {
+                initialImage: saved.sourceImage,
+                initialRendered: saved.renderedImage || null,
+                name
+            }
+        });
+        return true;
+
+
     }
   return (
       <div className="home">
@@ -87,29 +96,31 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="projects-grid">
-                    <div className="project-card group">
-                        <div className="preview">
-                            <img src="https://roomify-mlhuk267-dfwu1i.puter.site/projects/1770803585402/rendered.png" alt="Project" />
-                            <div className="badge">
-                                <span>Community</span>
-                            </div>
-                        </div>
-
-                        <div className="card-body">
-                            <div>
-                                <h3>Project Manhattan</h3>
-                                <div className="meta">
-                                    <Clock size={12}/>
-                                    <span>{new Date('01.01.2027').toLocaleDateString()}</span>
-                                    <span>By Aidan</span>
+                    {projects.map(({id, name, renderedImage, sourceImage,
+                        timestamp}) => (
+                        <div className="project-card group">
+                            <div className="preview">
+                                <img src={renderedImage || sourceImage} alt="Project" />
+                                <div className="badge">
+                                    <span>Community</span>
                                 </div>
                             </div>
-                            <div className="arrow">
-                                <ArrowUpRight size={18}/>
+
+                            <div className="card-body">
+                                <div>
+                                    <h3>{name}</h3>
+                                    <div className="meta">
+                                        <Clock size={12}/>
+                                        <span>{new Date(timestamp).toLocaleDateString()}</span>
+                                        <span>By Aidan</span>
+                                    </div>
+                                </div>
+                                <div className="arrow">
+                                    <ArrowUpRight size={18}/>
+                                </div>
                             </div>
                         </div>
-
-                    </div>
+                        ))}
                 </div>
             </div>
         </section>
