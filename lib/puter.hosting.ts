@@ -28,7 +28,7 @@ export const getOrCreateHostingConfig = async (): Promise<HostingConfig | null> 
 }
 
 export const uploadImagetoHosting = async ({hosting, url, projectId, label}:
-                                           StoreHostedImageParams): Promise<HostingAsset | null> => {
+                                           StoreHostedImageParams): Promise<HostedAsset | null> => {
     if(!hosting || !url) return null;
     if(isHostedUrl(url)) return { url };
 
